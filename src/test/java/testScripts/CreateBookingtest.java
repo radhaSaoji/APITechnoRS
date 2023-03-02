@@ -192,8 +192,8 @@ public class CreateBookingtest {
 				.when()
 				.get("/booking");
 		
-		List<Integer> listOfBookinIDs = resIDs.jsonPath().getList("bookingid");
-		Assert.assertFalse(listOfBookinIDs.contains(bookingID));
+		List<Integer> listOfBookinID= resIDs.jsonPath().getList("bookingid");
+		Assert.assertFalse(listOfBookinID.contains(bookingID));
 	}
 	
 	private void validateResponse(Response res, CreateBookingDetails bookingObj, String object) {

@@ -30,6 +30,7 @@ public class DemoTest {
 		RestAssured.baseURI = "https://0e686aed-6e36-4047-bcb4-a2417455c2d7.mock.pstmn.io";
 
 		Response res = RestAssured.given()
+				.log().all()
 				.headers("Accept", "application/json")
 				.when()
 				.get("/test");
